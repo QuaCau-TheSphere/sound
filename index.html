@@ -1,0 +1,22 @@
+<button id="ASong" onClick="playPause()">
+  <audio src="https://ff83c814-a2d5-4105-9a45-be3bec448ed7.mdnplay.dev/shared-assets/audio/t-rex-roar.mp3"></audio>
+  Song
+</button>
+
+<span id="text"></span>
+<script>
+  const aud = document.getElementById("ASong").children[0];
+  const isPlaying = false;
+  aud.pause();
+
+  function playPause() {
+    if (isPlaying) {
+      aud.pause();
+    } else {
+      aud.play();
+    }
+    isPlaying = !isPlaying;
+  }
+  const list = ["a", "b", "c", "d"]
+  document.getElementsByTagName("span")[0].innerHTML=list.at(list.length*Math.random())
+</script>
