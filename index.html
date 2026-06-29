@@ -3,7 +3,8 @@
   Song
 </button>
 
-<span id="text"></span>
+<div id="text"></div>
+
 <script>
   const aud = document.getElementById("ASong").children[0];
   const isPlaying = false;
@@ -18,5 +19,22 @@
     isPlaying = !isPlaying;
   }
   const list = ["a", "b", "c", "d"]
-  document.getElementsByTagName("span")[0].innerHTML=list.at(list.length*Math.random())
+  document.getElementsByTagName("div")[0].innerHTML=list.at(list.length*Math.random())
 </script>
+
+<style>
+  /*
+Source - https://stackoverflow.com/a/79593630
+Posted by WOW RAKIBUL
+Retrieved 2026-06-29, License - CC BY-SA 4.0
+*/
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  zoom: 2
+}
+</style>
