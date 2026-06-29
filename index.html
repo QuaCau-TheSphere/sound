@@ -1,12 +1,12 @@
-<button id="ASong" onClick="playPause()">
+<button id="sound" onClick="playPause()">
   <audio src="https://ff83c814-a2d5-4105-9a45-be3bec448ed7.mdnplay.dev/shared-assets/audio/t-rex-roar.mp3"></audio>
-  Song
+  Sound
 </button>
 
-<div id="text"></div>
+<div id="text" onClick="change()"></div>
 
 <script>
-  const aud = document.getElementById("ASong").children[0];
+  const aud = document.getElementById("sound").children[0];
   const isPlaying = false;
   aud.pause();
 
@@ -18,23 +18,21 @@
     }
     isPlaying = !isPlaying;
   }
+
   const list = ["a", "b", "c", "d"]
   document.getElementsByTagName("div")[0].innerHTML=list.at(list.length*Math.random())
+  function change() {
+    document.getElementsByTagName("div")[0].innerHTML=list.at(list.length*Math.random())
+  }
 </script>
 
 <style>
-  /*
-Source - https://stackoverflow.com/a/79593630
-Posted by WOW RAKIBUL
-Retrieved 2026-06-29, License - CC BY-SA 4.0
-*/
-
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;     /* Centers vertically */
-  zoom: 2
-}
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    zoom: 2
+  }
 </style>
