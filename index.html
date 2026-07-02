@@ -1,4 +1,5 @@
 <button id="sound" onClick="playPause()">
+  <img src="./Momo Lý Minh Nhật.jpg">  
   <audio src="https://ff83c814-a2d5-4105-9a45-be3bec448ed7.mdnplay.dev/shared-assets/audio/t-rex-roar.mp3"></audio>
   Sound
 </button>
@@ -20,9 +21,9 @@
   }
 
   const list = ["a", "b", "c", "d"]
-  document.getElementsByTagName("div")[0].innerHTML=list.at(list.length*Math.random())
+  document.getElementById("text").innerHTML=list.at(list.length*Math.random())
   function change() {
-    document.getElementsByTagName("div")[0].innerHTML=list.at(list.length*Math.random())
+    document.getElementById("text").innerHTML=list.at(list.length*Math.random())
   }
 </script>
 
@@ -33,6 +34,6 @@
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */
-    zoom: 2
+    /* zoom: 2 */
   }
 </style>
